@@ -3,7 +3,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width"/>
 <meta name="builder" content="Stronglify"/>
-<link rel="icon" type="image/x-icon" href="https://media.stronglify.com/367/favicon-1789773793.svg"/>
+<link rel="icon" type="image/x-icon" href="https://media.stronglify.com/367/favicon-1790189018.svg"/>
 <title>Una nueva era del café en Mill Bay.</title>
 <meta name="description" content="KÁVA &amp; Co. es un café familiar con granos tostados localmente, repostería fresca, desayunos y almuerzos para empezar el día, hacer una pausa o quedarse un rato."/>
 <meta name="robots" content="index"/>
@@ -76,7 +76,80 @@ body {
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"/>
-<link href="theme.css" rel="stylesheet"/></head>
+<style>
+:root {
+  --tinta: #100c08;
+  --arcilla: #fbbf24;
+  --lienzo: #f4eadc;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 5.5rem; }
+body {
+  margin: 0;
+  background: var(--lienzo);
+  color: var(--tinta);
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+::selection { background: var(--arcilla); color: var(--lienzo); }
+.font-display { font-family: "Fraunces", Georgia, serif; }
+.shell { max-width: 76rem; }
+.paper-rule { border-color: color-mix(in srgb, var(--tinta) 18%, transparent); }
+.ink { color: var(--tinta); }
+.clay { color: var(--arcilla); }
+.canvas { color: var(--lienzo); }
+.muted { color: color-mix(in srgb, var(--tinta) 78%, transparent); }
+.muted-light { color: color-mix(in srgb, var(--lienzo) 76%, transparent); }
+.bg-ink { background-color: var(--tinta); }
+.bg-clay { background-color: var(--arcilla); }
+.bg-canvas { background-color: var(--lienzo); }
+.focus-ring:focus-visible { outline: 3px solid var(--arcilla); outline-offset: 4px; }
+.nav-link {
+  color: color-mix(in srgb, var(--tinta) 76%, transparent);
+  text-decoration: none;
+  text-underline-offset: .35rem;
+}
+.nav-link:hover { color: var(--arcilla); text-decoration: underline; }
+.button-primary,
+.button-secondary {
+  align-items: center;
+  display: inline-flex;
+  font-size: .875rem;
+  font-weight: 700;
+  gap: .6rem;
+  justify-content: center;
+  min-height: 3rem;
+  padding: .75rem 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.button-primary { background: var(--arcilla); color: var(--lienzo); }
+.button-primary:hover { background: var(--tinta); }
+.button-secondary { border: 1px solid color-mix(in srgb, var(--tinta) 34%, transparent); color: var(--tinta); }
+.button-secondary:hover { background: var(--tinta); color: var(--lienzo); }
+.frame {
+  border: 1px solid color-mix(in srgb, var(--tinta) 22%, transparent);
+  box-shadow: 10px 10px 0 color-mix(in srgb, var(--arcilla) 23%, transparent);
+}
+.dark-wash {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--tinta) 78%, transparent), color-mix(in srgb, var(--tinta) 9%, transparent));
+}
+.work-card { border-top: 2px solid var(--arcilla); }
+.work-card:hover { background: color-mix(in srgb, var(--arcilla) 8%, var(--lienzo)); }
+</style>
+<style id="contrast-fix">
+ 
+::selection{color:var(--tinta)}
+.button-primary{color:var(--tinta)}
+.button-primary:hover{color:var(--lienzo)}
+.nav-link:hover{color:var(--tinta)}
+header .clay{color:#92400e}
+ 
+.dark-wash{background:linear-gradient(0deg,color-mix(in srgb,var(--tinta) 88%,transparent),color-mix(in srgb,var(--tinta) 60%,transparent))}
+ 
+.muted-light{color:rgb(244 234 220/.76)}
+</style></head>
 <body>
   <div class="overflow-hidden">
   <header class="sticky top-0 z-50 border-b paper-rule bg-canvas">
@@ -86,32 +159,32 @@ body {
       </a>
       <div class="hidden items-center gap-7 md:flex">
         
-        <a href="./#about" class="focus-ring nav-link text-sm font-semibold">El café</a>
+        <a href="/#about" class="focus-ring nav-link text-sm font-semibold">Nosotros</a>
         
-        <a href="./#menu" class="focus-ring nav-link text-sm font-semibold">Menú</a>
+        <a href="/#menu" class="focus-ring nav-link text-sm font-semibold">Menú</a>
         
-        <a href="./#reviews" class="focus-ring nav-link text-sm font-semibold">Opiniones</a>
+        <a href="/#reviews" class="focus-ring nav-link text-sm font-semibold">Opiniones</a>
         
-        <a href="./#visit" class="focus-ring nav-link text-sm font-semibold">Ubicación</a>
+        <a href="/#visit" class="focus-ring nav-link text-sm font-semibold">Ubicación</a>
         
       </div>
-      <a href="./#visit" class="button-primary focus-ring hidden md:inline-flex">Visítanos</a>
+      <a href="/#visit" class="button-primary focus-ring hidden md:inline-flex">Visítanos</a>
       <button id="menuButton" class="focus-ring flex h-10 w-10 items-center justify-center border paper-rule ink md:hidden" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">Menú</button>
     </nav>
     <div id="mobileMenu" class="hidden border-t paper-rule bg-canvas px-5 py-5 md:hidden">
       <div class="flex flex-col items-start gap-4">
         
-        <a href="./#about" class="focus-ring nav-link text-base font-semibold">El café</a>
+        <a href="/#about" class="focus-ring nav-link text-base font-semibold">Nosotros</a>
         
-        <a href="./#menu" class="focus-ring nav-link text-base font-semibold">Menú</a>
+        <a href="/#menu" class="focus-ring nav-link text-base font-semibold">Menú</a>
         
-        <a href="./#suggestions" class="focus-ring nav-link text-base font-semibold">Sugerencias</a>
+        <a href="/#suggestions" class="focus-ring nav-link text-base font-semibold">Productos</a>
         
-        <a href="./#reviews" class="focus-ring nav-link text-base font-semibold">Opiniones</a>
+        <a href="/#reviews" class="focus-ring nav-link text-base font-semibold">Opiniones</a>
         
-        <a href="./#visit" class="focus-ring nav-link text-base font-semibold">Ubicación</a>
+        <a href="/#visit" class="focus-ring nav-link text-base font-semibold">Ubicación</a>
         
-        <a href="./#visit" class="button-primary focus-ring mt-2 w-full">Contáctanos</a>
+        <a href="/#visit" class="button-primary focus-ring mt-2 w-full">Contáctanos</a>
       </div>
     </div>
   </header>
@@ -119,7 +192,7 @@ body {
 <main>
   <section class="relative min-h-[100dvh] border-b paper-rule" aria-labelledby="hero-title">
     <div class="absolute inset-y-0 right-0 hidden w-[58%] lg:block">
-      <img src="https://placehold.co/1920x1080" alt="Interior con una barra de trabajo y luz cálida" class="h-full w-full object-cover"/>
+      <img src="https://media.stronglify.com/367/coffee-01-1790364923.jpg" alt="Interior con una barra de trabajo y luz cálida" class="h-full w-full object-cover"/>
       <div class="absolute inset-0 bg-canvas opacity-75"></div>
     </div>
     <div class="shell relative mx-auto flex min-h-[100dvh] items-end px-5 pb-14 pt-32 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
@@ -138,7 +211,7 @@ body {
   <section id="about" class="border-b paper-rule py-24 sm:py-32" aria-labelledby="about-title">
     <div class="shell mx-auto grid gap-14 px-5 sm:px-6 lg:grid-cols-[.88fr_1.12fr] lg:items-center lg:px-8">
       <div class="relative order-2 lg:order-1">
-        <div class="frame bg-ink p-2"><img src="https://placehold.co/800x1000" alt="Mesa interior preparada para recibir visitas" class="aspect-[4/5] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/5]"/></div>
+        <div class="frame bg-ink p-2"><img src="https://media.stronglify.com/367/coffee-02-1790364925.jpg" alt="Mesa interior preparada para recibir visitas" class="aspect-[4/5] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/5]"/></div>
         <p class="muted mt-5 max-w-sm text-sm leading-6">La casa no es una vitrina silenciosa. Es un lugar para mirar despacio, conversar y volver a tocar los materiales.</p>
       </div>
       <div class="order-1 lg:order-2">
@@ -163,7 +236,7 @@ body {
         <p class="muted max-w-[50ch] text-lg leading-8">En 2720 Mill Bay Rd preparamos bebidas frescas, sopas caseras, algo dulce y almuerzos sencillos para cada tipo de visita.</p>
       </div>
       <div class="mt-14 grid gap-6 lg:grid-cols-[1.16fr_.84fr]">
-        <figure class="frame bg-ink p-2"><div class="relative overflow-hidden"><img src="https://placehold.co/1200x800" alt="Espacio de preparación con una mesa iluminada" class="h-[30rem] w-full object-cover sm:h-[36rem]"/><figcaption class="dark-wash absolute inset-x-0 bottom-0 p-6 text-sm leading-6 canvas sm:p-8">Cada taza empieza con buenos granos, atención al detalle y ganas de recibirte.</figcaption></div></figure>
+        <figure class="frame bg-ink p-2"><div class="relative overflow-hidden"><img src="https://media.stronglify.com/367/coffee-03-1790364926.jpg" alt="Espacio de preparación con una mesa iluminada" class="h-[30rem] w-full object-cover sm:h-[36rem]"/><figcaption class="dark-wash absolute inset-x-0 bottom-0 p-6 text-sm leading-6 canvas sm:p-8">Cada taza empieza con buenos granos, atención al detalle y ganas de recibirte.</figcaption></div></figure>
         <div class="grid content-start gap-0 border-t paper-rule">
           
           <article class="work-card border-b paper-rule px-1 py-7"><h3 class="mt-4 font-display text-3xl font-semibold tracking-tight ink">Espresso primero</h3><p class="muted mt-2 max-w-[48ch] leading-7">Café filtrado, americanos y bebidas de espresso preparados con granos tostados localmente.</p></article>
@@ -184,11 +257,11 @@ body {
       </div>
       <div class="mt-12 grid gap-6 md:grid-cols-3">
         
-        <article class="relative overflow-hidden bg-ink"><img src="https://placehold.co/600x600" alt="Producto de café y repostería" class="h-80 w-full object-cover opacity-75"/><div class="dark-wash absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 p-6 canvas"><p class="text-sm font-bold tracking-[.12em]">HOJALDRE</p><h3 class="mt-2 font-display text-3xl font-semibold tracking-tight">Croissants y pasteles</h3></div></article>
+        <article class="relative overflow-hidden bg-ink"><img src="https://media.stronglify.com/367/coffee-04-1790364928.jpg" alt="Producto de café y repostería" class="h-80 w-full object-cover opacity-75"/><div class="dark-wash absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 p-6 canvas"><p class="text-sm font-bold tracking-[.12em]">HOJALDRE</p><h3 class="mt-2 font-display text-3xl font-semibold tracking-tight">Croissants y pasteles</h3></div></article>
         
-        <article class="relative overflow-hidden bg-ink"><img src="https://placehold.co/600x600" alt="Producto de café y repostería" class="h-80 w-full object-cover opacity-75"/><div class="dark-wash absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 p-6 canvas"><p class="text-sm font-bold tracking-[.12em]">DEL DÍA</p><h3 class="mt-2 font-display text-3xl font-semibold tracking-tight">Muffins, scones y galletas</h3></div></article>
+        <article class="relative overflow-hidden bg-ink"><img src="https://media.stronglify.com/367/coffee-05-1790364929.jpg" alt="Producto de café y repostería" class="h-80 w-full object-cover opacity-75"/><div class="dark-wash absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 p-6 canvas"><p class="text-sm font-bold tracking-[.12em]">DEL DÍA</p><h3 class="mt-2 font-display text-3xl font-semibold tracking-tight">Muffins, scones y galletas</h3></div></article>
         
-        <article class="relative overflow-hidden bg-ink"><img src="https://placehold.co/600x600" alt="Producto de café y repostería" class="h-80 w-full object-cover opacity-75"/><div class="dark-wash absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 p-6 canvas"><p class="text-sm font-bold tracking-[.12em]">DULCE</p><h3 class="mt-2 font-display text-3xl font-semibold tracking-tight">Tartas, bollos y antojos</h3></div></article>
+        <article class="relative overflow-hidden bg-ink"><img src="https://media.stronglify.com/367/coffee-06-1790364930.jpg" alt="Producto de café y repostería" class="h-80 w-full object-cover opacity-75"/><div class="dark-wash absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 p-6 canvas"><p class="text-sm font-bold tracking-[.12em]">DULCE</p><h3 class="mt-2 font-display text-3xl font-semibold tracking-tight">Tartas, bollos y antojos</h3></div></article>
         
       </div>
       <div class="mt-20 grid gap-px border paper-rule md:grid-cols-2 lg:grid-cols-4">
@@ -239,7 +312,7 @@ body {
         <div class="mt-10 border-y paper-rule py-6"><p class="font-display text-2xl font-semibold tracking-tight ink">2720 Mill Bay Rd #120</p><p class="muted mt-1 leading-7">Mill Bay, BC</p></div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=2720%20Mill%20Bay%20Rd%20120%2C%20Mill%20Bay%2C%20BC" class="button-primary focus-ring mt-8" target="_blank" rel="noopener">Ver ubicación en el mapa</a>
       </div>
-      <div class="relative min-h-[28rem] bg-ink"><img src="https://placehold.co/1200x800" alt="Interior cálido de un café abierto a visitantes" class="h-full w-full object-cover opacity-80"/><div class="dark-wash absolute inset-0"></div><p class="absolute bottom-0 left-0 max-w-md p-7 font-display text-3xl font-semibold leading-tight tracking-tight canvas sm:p-10">Un café para encontrar tu ritmo, tu mesa y tu bebida favorita.</p></div>
+      <div class="relative min-h-[28rem] bg-ink"><img src="https://media.stronglify.com/367/coffee-07-1790364931.jpg" alt="Interior cálido de un café abierto a visitantes" class="h-full w-full object-cover opacity-80"/><div class="dark-wash absolute inset-0"></div><p class="absolute bottom-0 left-0 max-w-md p-7 font-display text-3xl font-semibold leading-tight tracking-tight canvas sm:p-10">Un café para encontrar tu ritmo, tu mesa y tu bebida favorita.</p></div>
     </div></div>
   </section>
 </main>
@@ -249,17 +322,17 @@ body {
       <div><a href="./#about" class="focus-ring inline-flex items-center gap-3 no-underline canvas"><span class="font-display text-xl font-semibold tracking-tight">La Casa del Café</span></a><p class="muted-light mt-3 max-w-md text-sm leading-6">KÁVA &amp; Co. Coffee, café familiar en Mill Bay.</p></div>
       <div class="flex flex-wrap gap-x-5 gap-y-3">
         
-        <a href="./#about" class="focus-ring text-sm font-semibold canvas hover:opacity-70">El café</a>
+        <a href="/#about" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Nosotros</a>
         
-        <a href="./#ritual" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Nuestro ritmo</a>
+        <a href="/#ritual" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Servicios</a>
         
-        <a href="./#menu" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Menú</a>
+        <a href="/#menu" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Menú</a>
         
-        <a href="./#suggestions" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Sugerencias</a>
+        <a href="/#suggestions" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Productos</a>
         
-        <a href="./#reviews" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Opiniones</a>
+        <a href="/#reviews" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Opiniones</a>
         
-        <a href="./#visit" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Ubicación</a>
+        <a href="/#visit" class="focus-ring text-sm font-semibold canvas hover:opacity-70">Ubicación</a>
         
       </div>
     </div>
